@@ -1,0 +1,397 @@
+/* =========================================
+   1. IMPORTS & VARIABLES (THE FOUNDATION)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root {
+    --bg-color: #fdfcfd;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent-color: #6d28d9;
+    --circle-color: #fbc02d;
+    --mesh-1: rgba(243, 232, 255, 0.8);
+    --mesh-2: rgba(224, 231, 255, 0.8);
+    --card-bg: #ffffff;
+    --icon-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Mode Overrides */
+.dark-mode {
+    --bg-color: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #8b5cf6;
+    --circle-color: #d97706;
+    --mesh-1: rgba(88, 28, 135, 0.15);
+    --mesh-2: rgba(30, 58, 138, 0.15);
+    --card-bg: #1e293b;
+    --icon-bg: #1e293b;
+    --border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   2. BASE RESET & BODY
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 15% 50%, var(--mesh-1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, var(--mesh-2) 0%, transparent 40%);
+    background-attachment: fixed; /* Keeps mesh static while scrolling */
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-left: 80px; /* Space for the fixed sidebar */
+}
+
+/* =========================================
+   3. NAVIGATION & SIDEBAR
+   ========================================= */
+.social-sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+
+.social-sidebar a {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social-sidebar a:hover {
+    transform: scale(1.15);
+    background: var(--text-primary);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+.theme-btn:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   4. HOME PAGE (HERO SECTION)
+   ========================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75vh;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.greeting {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.typing-text span {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.hero-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4);
+}
+
+/* --- Hero Visuals & Circle Clipping --- */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 380px;  
+    height: 380px;
+    background: var(--circle-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Pushes image to bottom */
+    overflow: hidden; /* CLIPS THE BOTTOM PERFECTLY */
+    z-index: 2;
+    transition: background 0.3s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    width: 85%; /* Image scaling */
+    height: auto;
+    position: relative;
+    z-index: 3;
+    display: block;
+}
+
+/* --- Floating Icons --- */
+.float-icon {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    z-index: 3;
+    animation: float 4s ease-in-out infinite;
+    transition: background 0.3s;
+    border: 1px solid var(--border-color);
+}
+
+.icon-1 { top: 5%; left: 5%; color: #3776ab; animation-delay: 0s; } 
+.icon-2 { top: 25%; right: 0%; color: #4479a1; animation-delay: 1s; } 
+.icon-3 { bottom: 15%; left: 0%; color: #f7df1e; animation-delay: 2s; } 
+.icon-4 { bottom: 5%; right: 15%; color: #e34f26; animation-delay: 3s; } 
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* =========================================
+   5. INTERNAL PAGES (ABOUT & PROJECTS)
+   ========================================= */
+.content-section {
+    padding: 60px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-header h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+    font-weight: 800;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* BUG FIX: Removed opacity:0 so cards always show */
+.card {
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border-color: var(--accent-color);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-top: 15px;
+}
+
+.card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+/* =========================================
+   6. MOBILE RESPONSIVE QUERIES
+   ========================================= */
+@media (max-width: 968px) {
+    .hero { 
+        flex-direction: column; 
+        text-align: center; 
+        margin-top: 40px; 
+    }
+    .hero-content h1 { font-size: 3rem; }
+    .hero-content { max-width: 100%; }
+    .wrapper { margin-left: 0; }
+    .social-sidebar { display: none; }
+    
+    /* Shrink the circle & layout for mobile */
+    .avatar-wrapper { 
+        width: 280px; 
+        height: 280px; 
+        margin: 0 auto;
+    }
+    
+    .nav-links { display: none; /* Add a hamburger menu later if needed */ }
+    
+    .float-icon { width: 45px; height: 45px; font-size: 1.2rem; }
+}
+
+/* =========================================
+   7. CONTACT PAGE FORM STYLING
+   ========================================= */
+.contact-container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
+    margin-top: 40px; 
+}
+
+.form-group { 
+    margin-bottom: 20px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    color: var(--text-primary); 
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea { 
+    width: 100%; 
+    padding: 12px 15px; 
+    border: 1px solid var(--border-color); 
+    border-radius: 8px; 
+    background: var(--card-bg); 
+    color: var(--text-primary); 
+    font-family: 'Poppins', sans-serif; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.form-group input:focus, .form-group textarea:focus { 
+    outline: none; 
+    border-color: var(--accent-color); 
+    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+
+/* Mobile screen par dono boxes (Info aur Form) ko ek line mein stack karne ke liye */
+@media (max-width: 768px) { 
+    .contact-container { grid-template-columns: 1fr; } 
+}
