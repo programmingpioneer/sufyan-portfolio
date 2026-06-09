@@ -16,6 +16,14 @@
 
 ---
 
+## 🖼️ Website Preview
+
+<p align="center">
+  <img src="Web-preview.png" alt="Sufyan Portfolio Live Demo" width="90%">
+</p>
+
+---
+
 ## 📁 Project Structure
 📂 sufyan-portfolio/  
 │  
