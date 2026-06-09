@@ -19,7 +19,7 @@
 ## 🖼️ Website Preview
 
 <p align="center">
-  <img src="Web-preview.png" alt="Sufyan Portfolio Live Demo" width="90%">
+  <img src="Web-preview.gif" alt="Sufyan Portfolio Live Demo" width="90%">
 </p>
 
 ---
