@@ -327,31 +327,64 @@ header nav {
 }
 
 /* =========================================
-   6. MOBILE RESPONSIVE QUERIES
+   HAMBURGER DEFAULT HIDDEN (Put this above media query)
    ========================================= */
-@media (max-width: 968px) {
-    .hero { 
-        flex-direction: column; 
-        text-align: center; 
-        margin-top: 40px; 
-    }
-    .hero-content h1 { font-size: 3rem; }
-    .hero-content { max-width: 100%; }
-    .wrapper { margin-left: 0; }
-    .social-sidebar { display: none; }
-    
-    /* Shrink the circle & layout for mobile */
-    .avatar-wrapper { 
-        width: 280px; 
-        height: 280px; 
-        margin: 0 auto;
-    }
-    
-    .nav-links { display: none; /* Add a hamburger menu later if needed */ }
-    
-    .float-icon { width: 45px; height: 45px; font-size: 1.2rem; }
+.hamburger {
+    display: none; /* Desktop par hide rahega */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: color 0.3s;
 }
 
+.hamburger:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   6. MOBILE RESPONSIVE QUERIES (THE FIX)
+   ========================================= */
+@media (max-width: 968px) {
+    /* Layout Fixes */
+    .hero { flex-direction: column; text-align: center; margin-top: 30px; gap: 30px; }
+    .hero-content { max-width: 100%; }
+    .wrapper { margin-left: 0; padding: 0 15px; }
+    .social-sidebar { display: none; }
+    
+    /* Typography Scaling (Fonts chote kiye) */
+    .hero-content h1 { font-size: 2.8rem; }
+    .typing-text { font-size: 1.2rem; }
+    .hero-content p { font-size: 0.95rem; }
+    .section-header h1 { font-size: 2.3rem; }
+    
+    /* Visuals Scaling */
+    .avatar-wrapper { width: 260px; height: 260px; margin: 0 auto; }
+    .float-icon { width: 45px; height: 45px; font-size: 1.2rem; }
+    
+    /* === HAMBURGER MENU LOGIC === */
+    .hamburger { display: block; /* Mobile par show hoga */ }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Screen ke right side se bahar chhupa diya */
+        width: 250px;
+        height: 100vh;
+        background: var(--card-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.4s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    /* Jab JS class add karega toh menu slide in hoga */
+    .nav-links.active {
+        right: 0; 
+    }
+}
 /* =========================================
    7. CONTACT PAGE FORM STYLING
    ========================================= */

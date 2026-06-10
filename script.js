@@ -27,7 +27,37 @@ if (themeBtn) {
             icon.classList.replace('fa-sun', 'fa-moon');
             localStorage.setItem('portfolio-theme', 'light'); // Save light state
         }
+    });  
+    // =========================================
+// HAMBURGER MENU ENGINE
+// =========================================
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        // Menu ko slide in/out karo
+        navLinks.classList.toggle('active');
+        
+        // Icon change logic (Bars to Cross)
+        const icon = hamburger.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
     });
+
+    // Jab kisi link par click ho toh menu wapas band ho jaye
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        });
+    });
+}
+    
+
 } else {
     console.log("Dark mode button not found on this page.");
 }
