@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufyan Khan | Portfolio</title>
+    <title>Sufyan Khan | Programming Pioneer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="social-sidebar">
         <a href="https://linkedin.com/in/sufyan-khans" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/programmingpioneer" target="_blank"><i class="fab fa-github"></i></a>
@@ -19,16 +18,15 @@
     <div class="wrapper">
         <header>
             <nav>
-                <div class="logo"><i class="fas fa-code"></i> SK</div>
+                <div class="logo"><i class="fas fa-code"></i> programming<span>.pioneer</span></div>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <div class="nav-controls" style="display: flex; gap: 20px; align-items: center; z-index: 1000;">
-                    <button id="theme-btn" class="theme-btn"><i class="fas fa-moon"></i></button>
+                <div class="nav-controls">
                     <div class="hamburger"><i class="fas fa-bars"></i></div>
                 </div>
             </nav>
@@ -36,19 +34,20 @@
 
         <main class="hero">
             <div class="hero-content">
-                <span class="greeting">ASPIRING SOFTWARE ENGINEER</span>
+                <span class="greeting">🚀 ASPIRING SOFTWARE ENGINEER</span>
                 <h1>Sufyan Khan</h1>
-                <h2 class="typing-text">Mastering the <span>Fundamentals|</span></h2>
-                <p>I’m a recent HSSC Computer Science graduate driven by raw logic and problem-solving. Instead of just studying theory, I build practical projects in C++, Python, and Web Dev. Currently seeking an international undergraduate scholarship to push my limits and prove my grit.</p>
-                <a href="projects.html" class="btn-primary">View My Work <i class="fas fa-chevron-right"></i></a>
+                <h2 class="typing-text">Building <span id="dynamic-text"></span></h2>
+                <p>HSSC Computer Science graduate crafting real‑world projects in Python, C++, and modern web technologies. Pursuing an international scholarship to further my journey from self‑taught coder to professional engineer.</p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn-primary">View My Work <i class="fas fa-chevron-right"></i></a>
+                    <a href="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/SUFYAN_CV.pdf" class="btn-secondary" target="_blank">📄 Download CV</a>
+                </div>
             </div>
 
-           <div class="hero-visual">
-                
+            <div class="hero-visual">
                 <div class="avatar-wrapper">
-                    <img src="sufyan.png" alt="Sufyan Khan" class="avatar">
+                    <img src="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png" alt="Sufyan Khan" class="avatar">
                 </div>
-                
                 <div class="float-icon icon-1"><i class="fab fa-python"></i></div>
                 <div class="float-icon icon-2"><i class="fas fa-database"></i></div>
                 <div class="float-icon icon-3"><i class="fab fa-js"></i></div>
@@ -56,6 +55,7 @@
             </div>
         </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

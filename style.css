@@ -1,430 +1,111 @@
-/* =========================================
-   1. IMPORTS & VARIABLES (THE FOUNDATION)
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-
+/* ========== CSS VARIABLES ========== */
 :root {
-    --bg-color: #fdfcfd;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --accent-color: #6d28d9;
-    --circle-color: #fbc02d;
-    --mesh-1: rgba(243, 232, 255, 0.8);
-    --mesh-2: rgba(224, 231, 255, 0.8);
-    --card-bg: #ffffff;
-    --icon-bg: #ffffff;
-    --border-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Dark Mode Overrides */
-.dark-mode {
-    --bg-color: #0f172a;
-    --text-primary: #f8fafc;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f1f5f9;
     --text-secondary: #94a3b8;
-    --accent-color: #8b5cf6;
-    --circle-color: #d97706;
-    --mesh-1: rgba(88, 28, 135, 0.15);
-    --mesh-2: rgba(30, 58, 138, 0.15);
+    --accent-color: #6366f1;
+    --accent-hover: #818cf8;
     --card-bg: #1e293b;
     --icon-bg: #1e293b;
-    --border-color: rgba(255, 255, 255, 0.05);
+    --border-color: #334155;
 }
 
-/* =========================================
-   2. BASE RESET & BODY
-   ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
+/* ========== GLOBAL ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-    background: var(--bg-color);
-    background-image: 
-        radial-gradient(circle at 15% 50%, var(--mesh-1) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, var(--mesh-2) 0%, transparent 40%);
-    background-attachment: fixed; /* Keeps mesh static while scrolling */
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background-color: var(--bg-primary);
     color: var(--text-primary);
-    min-height: 100vh;
     overflow-x: hidden;
-    transition: background 0.3s ease, color 0.3s ease;
 }
+a { color: var(--accent-color); text-decoration: none; }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-left: 80px; /* Space for the fixed sidebar */
-}
-
-/* =========================================
-   3. NAVIGATION & SIDEBAR
-   ========================================= */
+/* ========== SOCIAL SIDEBAR ========== */
 .social-sidebar {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 100;
+    position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 20px; z-index: 1000;
 }
+.social-sidebar a { color: var(--text-secondary); font-size: 1.4rem; transition: 0.3s; }
+.social-sidebar a:hover { color: var(--accent-color); transform: translateY(-3px); }
 
-.social-sidebar a {
-    width: 40px;
-    height: 40px;
-    background: var(--accent-color);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+/* ========== WRAPPER & HEADER ========== */
+.wrapper { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+header { padding: 1.5rem 0; }
+nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+.logo span { color: var(--accent-color); }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { color: var(--text-secondary); font-weight: 500; transition: color 0.3s; position: relative; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+.nav-links a.active::after {
+    content: ''; position: absolute; bottom: -5px; left: 0;
+    width: 100%; height: 3px; background: var(--accent-color); border-radius: 2px;
 }
+.hamburger { display: none; cursor: pointer; color: var(--text-primary); font-size: 1.5rem; }
 
-.social-sidebar a:hover {
-    transform: scale(1.15);
-    background: var(--text-primary);
-}
+/* ========== HERO SECTION ========== */
+.hero { display: flex; align-items: center; justify-content: space-between; min-height: 80vh; padding: 2rem 0; gap: 3rem; flex-wrap: wrap; }
+.hero-content { flex: 1 1 500px; }
+.greeting { color: var(--accent-color); font-weight: 600; letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase; }
+.hero h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0; }
+.typing-text { font-size: 2rem; margin-bottom: 1rem; }
+.typing-text span { color: var(--accent-color); }
+.hero p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; max-width: 600px; }
+.hero-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-}
-
-.logo {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--accent-color);
-}
-
-.theme-btn {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: color 0.3s;
-}
-
-.theme-btn:hover {
-    color: var(--accent-color);
-}
-
-/* =========================================
-   4. HOME PAGE (HERO SECTION)
-   ========================================= */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 75vh;
-    gap: 50px;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 550px;
-}
-
-.greeting {
-    display: inline-block;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-    font-weight: 800;
-}
-
-.typing-text {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-}
-
-.typing-text span {
-    color: var(--accent-color);
-    font-weight: 700;
-}
-
-.hero-content p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 30px;
-    font-size: 1.05rem;
-}
-
+/* ========== BUTTONS ========== */
 .btn-primary {
-    display: inline-block;
-    background: var(--accent-color);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(109, 40, 217, 0.3);
+    background: var(--accent-color); color: white; padding: 12px 28px; border-radius: 30px;
+    font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
 }
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(109, 40, 217, 0.4);
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(99,102,241,0.3); }
+.btn-secondary {
+    background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color);
+    padding: 12px 28px; border-radius: 30px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s;
 }
+.btn-secondary:hover { background: var(--accent-color); color: white; transform: translateY(-3px); }
 
-/* --- Hero Visuals & Circle Clipping --- */
-.hero-visual {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ========== HERO VISUAL ========== */
+.hero-visual { position: relative; flex: 1 1 300px; display: flex; justify-content: center; align-items: center; }
+.avatar-wrapper { width: 280px; height: 280px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-color), #a78bfa); padding: 5px; animation: float 6s ease-in-out infinite; }
+.avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 4px solid var(--bg-primary); }
+.float-icon { position: absolute; font-size: 2rem; color: var(--accent-color); animation: floatIcon 4s ease-in-out infinite; }
+.icon-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.icon-2 { top: 70%; left: 0; animation-delay: 1s; }
+.icon-3 { top: 20%; right: 5%; animation-delay: 2s; }
+.icon-4 { bottom: 10%; right: 10%; animation-delay: 0.5s; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes floatIcon { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(10deg); } }
 
-.avatar-wrapper {
-    position: relative;
-    width: 380px;  
-    height: 380px;
-    background: var(--circle-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Pushes image to bottom */
-    overflow: hidden; /* CLIPS THE BOTTOM PERFECTLY */
-    z-index: 2;
-    transition: background 0.3s;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
+/* ========== CONTENT SECTIONS ========== */
+.content-section { padding-bottom: 3rem; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-header h1 { font-size: 2.5rem; }
+.section-header p { color: var(--text-secondary); }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 30px; transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.card-icon { font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem; }
+.card h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+.card h3 { font-size: 1rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+.card p { color: var(--text-secondary); line-height: 1.6; }
+.card-subtitle { color: var(--accent-color) !important; font-weight: 500; }
+.card-links { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; }
+.card-links a { font-weight: 600; }
+.tech-stack { color: var(--accent-color); font-weight: 600; font-size: 0.9rem; margin: 8px 0; }
+.contact-card { text-align: center; }
+.contact-link { font-size: 1.1rem; color: var(--accent-color); word-break: break-word; }
+.statement { font-size: 1.1rem; font-style: italic; }
 
-.avatar {
-    width: 85%; /* Image scaling */
-    height: auto;
-    position: relative;
-    z-index: 3;
-    display: block;
-}
-
-/* --- Floating Icons --- */
-.float-icon {
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    background: var(--icon-bg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    z-index: 3;
-    animation: float 4s ease-in-out infinite;
-    transition: background 0.3s;
-    border: 1px solid var(--border-color);
-}
-
-.icon-1 { top: 5%; left: 5%; color: #3776ab; animation-delay: 0s; } 
-.icon-2 { top: 25%; right: 0%; color: #4479a1; animation-delay: 1s; } 
-.icon-3 { bottom: 15%; left: 0%; color: #f7df1e; animation-delay: 2s; } 
-.icon-4 { bottom: 5%; right: 15%; color: #e34f26; animation-delay: 3s; } 
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
-/* =========================================
-   5. INTERNAL PAGES (ABOUT & PROJECTS)
-   ========================================= */
-.content-section {
-    padding: 60px 0;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-header h1 {
-    font-size: 3rem;
-    color: var(--text-primary);
-    font-weight: 800;
-}
-
-.section-header p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-/* BUG FIX: Removed opacity:0 so cards always show */
-.card {
-    background: var(--card-bg);
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    border-color: var(--accent-color);
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin-top: 15px;
-}
-
-.card p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-top: 5px;
-}
-
-/* =========================================
-   HAMBURGER DEFAULT HIDDEN (Put this above media query)
-   ========================================= */
-.hamburger {
-    display: none; /* Desktop par hide rahega */
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-primary);
-    transition: color 0.3s;
-}
-
-.hamburger:hover {
-    color: var(--accent-color);
-}
-
-/* =========================================
-   6. MOBILE RESPONSIVE QUERIES (THE FIX)
-   ========================================= */
-@media (max-width: 968px) {
-    /* Layout Fixes */
-    .hero { flex-direction: column; text-align: center; margin-top: 30px; gap: 30px; }
-    .hero-content { max-width: 100%; }
-    .wrapper { margin-left: 0; padding: 0 15px; }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
     .social-sidebar { display: none; }
-    
-    /* Typography Scaling (Fonts chote kiye) */
-    .hero-content h1 { font-size: 2.8rem; }
-    .typing-text { font-size: 1.2rem; }
-    .hero-content p { font-size: 0.95rem; }
-    .section-header h1 { font-size: 2.3rem; }
-    
-    /* Visuals Scaling */
-    .avatar-wrapper { width: 260px; height: 260px; margin: 0 auto; }
-    .float-icon { width: 45px; height: 45px; font-size: 1.2rem; }
-    
-    /* === HAMBURGER MENU LOGIC === */
-    .hamburger { display: block; /* Mobile par show hoga */ }
-    
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%; /* Screen ke right side se bahar chhupa diya */
-        width: 250px;
-        height: 100vh;
-        background: var(--card-bg);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        transition: right 0.4s ease-in-out;
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-        z-index: 999;
-    }
-
-    /* Jab JS class add karega toh menu slide in hoga */
-    .nav-links.active {
-        right: 0; 
-    }
-}
-/* =========================================
-   7. CONTACT PAGE FORM STYLING
-   ========================================= */
-.contact-container { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 40px; 
-    margin-top: 40px; 
-}
-
-.form-group { 
-    margin-bottom: 20px; 
-}
-
-.form-group label { 
-    display: block; 
-    margin-bottom: 8px; 
-    font-weight: 600; 
-    color: var(--text-primary); 
-    font-size: 0.9rem;
-}
-
-.form-group input, .form-group textarea { 
-    width: 100%; 
-    padding: 12px 15px; 
-    border: 1px solid var(--border-color); 
-    border-radius: 8px; 
-    background: var(--card-bg); 
-    color: var(--text-primary); 
-    font-family: 'Poppins', sans-serif; 
-    transition: border-color 0.3s, box-shadow 0.3s; 
-}
-
-.form-group input:focus, .form-group textarea:focus { 
-    outline: none; 
-    border-color: var(--accent-color); 
-    box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
-}
-
-/* Mobile screen par dono boxes (Info aur Form) ko ek line mein stack karne ke liye */
-@media (max-width: 768px) { 
-    .contact-container { grid-template-columns: 1fr; } 
+    .nav-links { display: none; position: absolute; top: 80px; left: 0; width: 100%; background: var(--bg-primary); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border-color); }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+    .hero { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero-buttons { justify-content: center; }
+    .info-grid { grid-template-columns: 1fr; }
 }

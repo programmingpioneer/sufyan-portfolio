@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Sufyan Khan</title>
+    <title>About | Programming Pioneer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <aside class="social-sidebar">
-        <a href="https://linkedin.com/in/sufyan-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://linkedin.com/in/sufyan-khans" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/programmingpioneer" target="_blank"><i class="fab fa-github"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -19,7 +18,7 @@
     <div class="wrapper">
         <header>
             <nav>
-                <div class="logo"><i class="fas fa-code"></i> Sufyan.</div>
+                <div class="logo"><i class="fas fa-code"></i> programming<span>.pioneer</span></div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
@@ -27,8 +26,7 @@
                     <li><a href="experience.html">Experience</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-               <div class="nav-controls" style="display: flex; gap: 20px; align-items: center; z-index: 1000;">
-                    <button id="theme-btn" class="theme-btn"><i class="fas fa-moon"></i></button>
+                <div class="nav-controls">
                     <div class="hamburger"><i class="fas fa-bars"></i></div>
                 </div>
             </nav>
@@ -36,31 +34,38 @@
 
         <main class="content-section">
             <div class="section-header">
-                <h1>Professional <span>Profile</span></h1>
+                <h1>Professional <span style="color: var(--accent-color);">Profile</span></h1>
                 <p>Disciplined academic and developer focused on scalable systems.</p>
             </div>
 
-            <div class="info-grid">
+            <div class="info-grid" style="margin-bottom: 2rem;">
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h2>Education</h2>
                     <h3>Higher Secondary School Certificate (HSSC)</h3>
-                    <p>Allama Iqbal Model School & College (AIMS)</p>
-                    <p><strong>Grade A (850/1,200) - Computer Science</strong></p>
-                    <p>Core stream: Mathematics, Physics, Computer Science. Fully verified by IBCC & MOFA.</p>
+                    <p class="card-subtitle">Allama Iqbal Model School & College (AIMS)</p>
+                    <p><strong>Grade A (850/1,200) – Computer Science</strong></p>
+                    <p>Core stream: Mathematics, Physics, Computer Science.<br>Fully verified by IBCC & MOFA.</p>
                 </div>
 
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
                     <h2>Leadership & Discipline</h2>
                     <h3>College Tech Club Founder</h3>
-                    <p>Established hardware and coding club, organizing inter-class competitions.</p>
-                    <h3>Under-19 District Badminton</h3>
-                    <p>Recognized for athletic excellence and team discipline in regional sports competitions.</p>
+                    <p>Established hardware and coding club, organised inter‑class competitions and workshops.</p>
+                    <h3>Under‑19 District Badminton</h3>
+                    <p>Recognised for athletic excellence and team discipline in regional sports competitions.</p>
                 </div>
+            </div>
+
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-icon"><i class="fas fa-quote-right"></i></div>
+                <h2>My Philosophy</h2>
+                <p class="statement">I believe that pure discipline and self‑learning can transform a curious student into a world‑class engineer. Every line of code I write is a step towards solving real problems and proving that potential isn't defined by resources, but by determination.</p>
             </div>
         </main>
     </div>
 
-    <script src="script.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
