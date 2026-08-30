@@ -1,87 +1,416 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Programming Pioneer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <aside class="social-sidebar">
-        <a href="https://linkedin.com/in/sufyan-khan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/programmingpioneer" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-    </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Sufyan Khan — Programming Pioneer</title>
 
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="logo"><i class="fas fa-code"></i> programming<span>.pioneer</span></div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-controls">
-                    <div class="hamburger"><i class="fas fa-bars"></i></div>
-                </div>
-            </nav>
-        </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-        <main class="content-section">
-            <div class="section-header">
-                <h1>Technical <span style="color: var(--accent-color);">Repository</span></h1>
-                <p>Raw logic, database management, and semantic web deployments.</p>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>PP</text></svg>"
+    />
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Explore Sufyan Khan's technical projects — Python applications, Flask web apps, database systems, and JavaScript tools. Each project includes source code and live preview."
+    />
+    <meta
+      name="keywords"
+      content="Sufyan Khan, Projects, Programming Pioneer, Python Projects, Flask, TiDB, Web Apps, DocoDive, Grade Manager, Quiz Engine, Pakistan"
+    />
+    <meta name="author" content="Sufyan Khan" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Projects | Sufyan Khan — Programming Pioneer"
+    />
+    <meta
+      property="og:description"
+      content="Python, Flask, and JavaScript projects with live previews and source code."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://programmingpioneer.github.io/sufyan-portfolio/projects.html"
+    />
+    <meta
+      property="og:image"
+      content="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Projects | Sufyan Khan — Programming Pioneer"
+    />
+    <meta
+      name="twitter:description"
+      content="Python, Flask, and JavaScript projects with live previews."
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-logo"><span>P</span>P</div>
+    </div>
+
+    <header>
+      <div class="wrapper">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-code"></i> programming<span>.pioneer</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-controls">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-section">
+      <div class="wrapper">
+        <div class="section-header reveal" style="padding-top: 2rem">
+          <h1>
+            Technical <span style="color: var(--accent-color)">Repository</span>
+          </h1>
+          <p>Raw logic, database management, and semantic web deployments.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="database">Database</button>
+          <button class="filter-btn" data-filter="javascript">
+            JavaScript
+          </button>
+        </div>
+
+        <!-- Project Cards (compact + 3 columns + fallback) -->
+        <div class="info-grid projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal-left" data-category="python database">
+            <div class="thumb-wrap">
+              <img
+                src="screenshots/grade-manager.png"
+                alt="Student Grade Manager screenshot"
+                class="project-thumb"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="thumb-fallback"><i class="fas fa-chart-bar"></i></div>
             </div>
-
-            <div class="info-grid">
-                <div class="card">
-                    <h2>Student Grade Manager</h2>
-                    <p class="tech-stack">Python, File I/O, Data Validation</p>
-                    <p>Turned repetitive manual grade calculations into a one‑command operation. This console tool reads student records from files, validates every entry, and instantly produces sorted result sheets and performance summaries.</p>
-                    <div class="card-links">
-                        <a href="https://github.com/programmingpioneer" target="_blank">View Source Code ➔</a>
-                        <a href="https://grade-management-system-iffr.onrender.com" target="_blank">Live Web Preview ➔</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h2>DocoDive – Cloud Programming Library</h2>
-                    <p class="tech-stack">Python, Flask, TiDB, Cloudflare R2, Brevo</p>
-                    <p>A full‑fledged community library built entirely on free‑tier cloud services. Readers can upload, review, and discuss programming books while moderators keep the platform clean.</p>
-                    <div class="card-links">
-                        <a href="https://github.com/programmingpioneer/docodive" target="_blank">View Source Code ➔</a>
-                        <a href="https://docodive.programmingpioneer.com" target="_blank">Live Web Preview ➔</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h2>Automated Attendance Tracker</h2>
-                    <p class="tech-stack">Python, CSV Processing, Data Visualisation</p>
-                    <p>Replaced chaotic paper attendance sheets with a clean, data‑driven pipeline. Feed it a raw CSV and instantly get per‑student attendance rates, automated alerts, and visual charts.</p>
-                    <div class="card-links">
-                        <a href="https://github.com/programmingpioneer" target="_blank">View Source Code ➔</a>
-                        <a href="https://student-attendance-tracker-dsen.onrender.com" target="_blank">Live Web Preview ➔</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h2>Interactive Quiz Engine</h2>
-                    <p class="tech-stack">JavaScript, DOM Manipulation, Timer Logic</p>
-                    <p>Bringing the thrill of a live quiz show straight to the browser. Every question appears dynamically against a countdown clock, scores update instantly.</p>
-                    <div class="card-links">
-                        <a href="https://github.com/programmingpioneer" target="_blank">View Source Code ➔</a>
-                        <a href="https://synapse-assessment-portal.onrender.com/" target="_blank">Live Web Preview ➔</a>
-                    </div>
-                </div>
+            <h2>Student Grade Manager</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">File I/O</span>
+              <span class="tech-tag">Validation</span>
             </div>
-        </main>
+            <p>
+              Reads student records, validates entries, and produces sorted
+              result sheets with performance summaries.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/programmingpioneer" target="_blank"
+                >Source ➔</a
+              >
+              <a
+                href="https://grade-management-system-iffr.onrender.com"
+                target="_blank"
+                >Live ➔</a
+              >
+            </div>
+            <button class="details-btn" data-project="grade">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card reveal-right"
+            data-category="python web database"
+          >
+            <div class="thumb-wrap">
+              <img
+                src="screenshots/docodive.png"
+                alt="DocoDive screenshot"
+                class="project-thumb"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="thumb-fallback"><i class="fas fa-cloud"></i></div>
+            </div>
+            <h2>DocoDive – Cloud Library</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">TiDB</span>
+              <span class="tech-tag">R2</span>
+            </div>
+            <p>
+              A free-tier cloud library with uploads, reviews, discussions, and
+              moderation — zero infrastructure cost.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://github.com/programmingpioneer/docodive"
+                target="_blank"
+                >Source ➔</a
+              >
+              <a href="https://docodive.programmingpioneer.com" target="_blank"
+                >Live ➔</a
+              >
+            </div>
+            <button class="details-btn" data-project="docodive">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal-left" data-category="python web">
+            <div class="thumb-wrap">
+              <img
+                src="screenshots/attendance-tracker.png"
+                alt="Attendance Tracker screenshot"
+                class="project-thumb"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="thumb-fallback">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+            </div>
+            <h2>Attendance Tracker</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CSV</span>
+              <span class="tech-tag">Charts</span>
+            </div>
+            <p>
+              Feed a CSV, get per-student attendance rates, alerts, and visual
+              charts instantly.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/programmingpioneer" target="_blank"
+                >Source ➔</a
+              >
+              <a
+                href="https://student-attendance-tracker-dsen.onrender.com"
+                target="_blank"
+                >Live ➔</a
+              >
+            </div>
+            <button class="details-btn" data-project="attendance">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal-right" data-category="javascript web">
+            <div class="thumb-wrap">
+              <img
+                src="screenshots/quiz-engine.png"
+                alt="Quiz Engine screenshot"
+                class="project-thumb"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="thumb-fallback"><i class="fas fa-brain"></i></div>
+            </div>
+            <h2>Interactive Quiz Engine</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">DOM</span>
+              <span class="tech-tag">Timer</span>
+            </div>
+            <p>
+              Dynamic questions, countdown timer, and instant score updates —
+              right in the browser.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/programmingpioneer" target="_blank"
+                >Source ➔</a
+              >
+              <a
+                href="https://synapse-assessment-portal.onrender.com/"
+                target="_blank"
+                >Live ➔</a
+              >
+            </div>
+            <button class="details-btn" data-project="quiz">
+              View Details <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Advanced Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-code"></i> programming<span>.pioneer</span>
+            </div>
+            <p>
+              Disciplined developer building real-world projects and sharing
+              knowledge freely.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://linkedin.com/in/sufyan-khans"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/programmingpioneer"
+                target="_blank"
+                title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="mailto:7t7sufyan@gmail.com" title="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Quick Links <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Connect <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:7t7sufyan@gmail.com"
+                  ><i class="fas fa-envelope"></i> 7t7sufyan@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sufyan-khans" target="_blank"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/programmingpioneer" target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </li>
+              <li>
+                <span
+                  ><i class="fas fa-map-marker-alt"></i> Sakhakot, Malakand,
+                  KP</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 programming.pioneer · Built with pure discipline.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+      <svg viewBox="0 0 50 50">
+        <circle class="ring-bg" cx="25" cy="25" r="22"></circle>
+        <circle class="ring-progress" cx="25" cy="25" r="22"></circle>
+      </svg>
+    </button>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+      <div class="modal">
+        <button class="modal-close" id="modal-close" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-visual" id="modal-visual"></div>
+
+        <h2 id="modal-title"></h2>
+        <div class="tech-tags" id="modal-tech"></div>
+
+        <h3>Problem</h3>
+        <p id="modal-problem"></p>
+
+        <h3>Solution</h3>
+        <p id="modal-solution"></p>
+
+        <h3>Features</h3>
+        <ul id="modal-features"></ul>
+
+        <h3>Challenges</h3>
+        <p id="modal-challenges"></p>
+
+        <h3>What I Learned</h3>
+        <ul id="modal-learnings"></ul>
+
+        <div class="card-links">
+          <a href="#" id="modal-github" target="_blank">View Source Code ➔</a>
+          <a href="#" id="modal-live" target="_blank">Live Web Preview ➔</a>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,61 +1,422 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufyan Khan | Programming Pioneer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <aside class="social-sidebar">
-        <a href="https://linkedin.com/in/sufyan-khans" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/programmingpioneer" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-    </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Sufyan Khan | Programming Pioneer — Software Engineer Portfolio
+    </title>
 
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="logo"><i class="fas fa-code"></i> programming<span>.pioneer</span></div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-controls">
-                    <div class="hamburger"><i class="fas fa-bars"></i></div>
-                </div>
-            </nav>
-        </header>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-        <main class="hero">
-            <div class="hero-content">
-                <span class="greeting">🚀 ASPIRING SOFTWARE ENGINEER</span>
-                <h1>Sufyan Khan</h1>
-                <h2 class="typing-text">Building <span id="dynamic-text"></span></h2>
-                <p>HSSC Computer Science graduate crafting real‑world projects in Python, C++, and modern web technologies. Pursuing an international scholarship to further my journey from self‑taught coder to professional engineer.</p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn-primary">View My Work <i class="fas fa-chevron-right"></i></a>
-                    <a href="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/SUFYAN_CV.pdf" class="btn-secondary" target="_blank">📄 Download CV</a>
-                </div>
-            </div>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-            <div class="hero-visual">
-                <div class="avatar-wrapper">
-                    <img src="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png" alt="Sufyan Khan" class="avatar">
-                </div>
-                <div class="float-icon icon-1"><i class="fab fa-python"></i></div>
-                <div class="float-icon icon-2"><i class="fas fa-database"></i></div>
-                <div class="float-icon icon-3"><i class="fab fa-js"></i></div>
-                <div class="float-icon icon-4"><i class="fab fa-html5"></i></div>
-            </div>
-        </main>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>PP</text></svg>"
+    />
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Sufyan Khan — Aspiring Software Engineer from Pakistan building real-world projects in Python, Flask, and modern web technologies. Explore my portfolio, projects, skills, and learning journey."
+    />
+    <meta
+      name="keywords"
+      content="Sufyan Khan, Programming Pioneer, Software Engineer, Python Developer, Flask, Web Developer, Portfolio, DocoDive, Pakistan, Full Stack"
+    />
+    <meta name="author" content="Sufyan Khan" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Sufyan Khan | Programming Pioneer — Software Engineer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Aspiring Software Engineer building real-world projects in Python, Flask, and modern web technologies."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://programmingpioneer.github.io/sufyan-portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sufyan Khan | Programming Pioneer" />
+    <meta
+      name="twitter:description"
+      content="Aspiring Software Engineer crafting real-world projects in Python and modern web tech."
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-logo"><span>P</span>P</div>
     </div>
 
+    <!-- Navbar -->
+    <header>
+      <div class="wrapper">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-code"></i> programming<span>.pioneer</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-controls">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="hero">
+      <div class="hero-content">
+        <span class="greeting">🚀 Aspiring Software Engineer</span>
+        <h1>Sufyan Khan</h1>
+        <h2 class="typing-text">Building <span id="dynamic-text"></span></h2>
+        <p>
+          HSSC Computer Science graduate crafting real-world projects in Python,
+          C++, and modern web technologies. Pursuing an international
+          scholarship to further my journey from self-taught coder to
+          professional engineer.
+        </p>
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn-primary"
+            >View My Work <i class="fas fa-chevron-right"></i
+          ></a>
+          <a
+            href="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/SUFYAN_CV.pdf"
+            class="btn-secondary"
+            target="_blank"
+            >📄 Download CV</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <img
+            src="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png"
+            alt="Sufyan Khan"
+            class="avatar"
+          />
+        </div>
+        <div class="float-icon icon-1"><i class="fab fa-python"></i></div>
+        <div class="float-icon icon-2"><i class="fas fa-database"></i></div>
+        <div class="float-icon icon-3"><i class="fab fa-js"></i></div>
+        <div class="float-icon icon-4"><i class="fab fa-html5"></i></div>
+      </div>
+    </main>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="wrapper">
+        <div class="stats-grid">
+          <div class="stat-card reveal-left">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card reveal-right">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Students Taught</div>
+          </div>
+          <div class="stat-card reveal-left">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Years Coding</div>
+          </div>
+          <div class="stat-card reveal-right">
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Team Peers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <div class="wrapper">
+        <div class="section-header reveal">
+          <h2>My <span style="color: var(--accent-color)">Skills</span></h2>
+          <p>Technologies I work with daily.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item reveal-left">
+            <div class="skill-name">
+              <span>Python</span><span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-right">
+            <div class="skill-name">
+              <span>HTML / CSS</span><span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-left">
+            <div class="skill-name">
+              <span>Flask</span><span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-right">
+            <div class="skill-name">
+              <span>C++</span><span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-left">
+            <div class="skill-name">
+              <span>JavaScript</span><span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-right">
+            <div class="skill-name">
+              <span>MySQL / TiDB</span><span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-item reveal-left">
+            <div class="skill-name">
+              <span>Git</span><span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="70"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section">
+      <div class="wrapper">
+        <div class="section-header reveal">
+          <h2>Tech <span style="color: var(--accent-color)">Stack</span></h2>
+          <p>Tools and platforms powering my work.</p>
+        </div>
+        <div class="tech-pills reveal">
+          <span class="tech-pill">🐍 Python</span>
+          <span class="tech-pill">⚡ Flask</span>
+          <span class="tech-pill">🌐 JavaScript</span>
+          <span class="tech-pill">🎨 HTML/CSS</span>
+          <span class="tech-pill">🗄️ TiDB</span>
+          <span class="tech-pill">☁️ Cloudflare R2</span>
+          <span class="tech-pill">📧 Brevo</span>
+          <span class="tech-pill">🐙 Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section">
+      <div class="wrapper">
+        <div class="section-header reveal">
+          <h2>
+            Featured <span style="color: var(--accent-color)">Projects</span>
+          </h2>
+          <p>A quick look at what I've built.</p>
+        </div>
+        <div class="featured-grid">
+          <div class="project-card reveal-left">
+            <h2>DocoDive – Cloud Programming Library</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">TiDB</span>
+            </div>
+            <p>
+              A full-fledged community library built entirely on free-tier cloud
+              services. Readers can upload, review, and discuss programming
+              books.
+            </p>
+            <div class="card-links">
+              <a href="https://docodive.programmingpioneer.com" target="_blank"
+                >Live Preview ➔</a
+              >
+            </div>
+          </div>
+          <div class="project-card reveal-right">
+            <h2>Student Grade Manager</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">File I/O</span>
+            </div>
+            <p>
+              Turned repetitive manual grade calculations into a one-command
+              operation with validation and sorted result sheets.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://grade-management-system-iffr.onrender.com"
+                target="_blank"
+                >Live Preview ➔</a
+              >
+            </div>
+          </div>
+          <div class="project-card reveal-left">
+            <h2>Interactive Quiz Engine</h2>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">DOM</span>
+            </div>
+            <p>
+              Bringing the thrill of a live quiz show straight to the browser
+              with dynamic questions and a countdown clock.
+            </p>
+            <div class="card-links">
+              <a
+                href="https://synapse-assessment-portal.onrender.com/"
+                target="_blank"
+                >Live Preview ➔</a
+              >
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem">
+          <a href="projects.html" class="btn-primary reveal"
+            >View All Projects <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-code"></i> programming<span>.pioneer</span>
+            </div>
+            <p>
+              Disciplined developer building real-world projects and sharing
+              knowledge freely.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://linkedin.com/in/sufyan-khans"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/programmingpioneer"
+                target="_blank"
+                title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="mailto:7t7sufyan@gmail.com" title="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Quick Links <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Connect <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:7t7sufyan@gmail.com"
+                  ><i class="fas fa-envelope"></i> 7t7sufyan@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sufyan-khans" target="_blank"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/programmingpioneer" target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </li>
+              <li>
+                <span
+                  ><i class="fas fa-map-marker-alt"></i> Sakhakot, Malakand,
+                  KP</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 programming.pioneer · Built with pure discipline.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+      <svg viewBox="0 0 50 50">
+        <circle class="ring-bg" cx="25" cy="25" r="22"></circle>
+        <circle class="ring-progress" cx="25" cy="25" r="22"></circle>
+      </svg>
+    </button>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
