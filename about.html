@@ -1,71 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Programming Pioneer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <aside class="social-sidebar">
-        <a href="https://linkedin.com/in/sufyan-khans" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/programmingpioneer" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-    </aside>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About The Builder | Sufyan Khan</title>
 
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="logo"><i class="fas fa-code"></i> programming<span>.pioneer</span></div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-controls">
-                    <div class="hamburger"><i class="fas fa-bars"></i></div>
-                </div>
-            </nav>
-        </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-        <main class="content-section">
-            <div class="section-header">
-                <h1>Professional <span style="color: var(--accent-color);">Profile</span></h1>
-                <p>Disciplined academic and developer focused on scalable systems.</p>
-            </div>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' text-anchor='middle' fill='white'>PP</text></svg>"
+    />
 
-            <div class="info-grid" style="margin-bottom: 2rem;">
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h2>Education</h2>
-                    <h3>Higher Secondary School Certificate (HSSC)</h3>
-                    <p class="card-subtitle">Allama Iqbal Model School & College (AIMS)</p>
-                    <p><strong>Grade A (850/1,200) – Computer Science</strong></p>
-                    <p>Core stream: Mathematics, Physics, Computer Science.<br>Fully verified by IBCC & MOFA.</p>
-                </div>
+    <meta
+      name="description"
+      content="The origin story of Sufyan Khan. HSSC Computer Science graduate, self-taught systems engineer, and disciplined builder rooted in Malakand."
+    />
+    <meta
+      name="keywords"
+      content="Sufyan Khan, About Sufyan, Programming Pioneer, Software Engineer, HSSC Computer Science, Self-taught Developer, Malakand, Pakistan"
+    />
+    <meta name="author" content="Sufyan Khan" />
+    <meta name="robots" content="index, follow" />
 
-                <div class="card">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h2>Leadership & Discipline</h2>
-                    <h3>College Tech Club Founder</h3>
-                    <p>Established hardware and coding club, organised inter‑class competitions and workshops.</p>
-                    <h3>Under‑19 District Badminton</h3>
-                    <p>Recognised for athletic excellence and team discipline in regional sports competitions.</p>
-                </div>
-            </div>
+    <meta
+      property="og:title"
+      content="About The Builder | Sufyan Khan"
+    />
+    <meta
+      property="og:description"
+      content="HSSC Computer Science graduate and self-taught developer focused on disciplined execution and scalable systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://programmingpioneer.github.io/sufyan-portfolio/about.html"
+    />
+    <meta
+      property="og:image"
+      content="https://pub-8f5fcc3c01514e53b12396f444c45448.r2.dev/portfolio/assets/Cover.png"
+    />
 
-            <div class="card" style="max-width: 800px; margin: 0 auto;">
-                <div class="card-icon"><i class="fas fa-quote-right"></i></div>
-                <h2>My Philosophy</h2>
-                <p class="statement">I believe that pure discipline and self‑learning can transform a curious student into a world‑class engineer. Every line of code I write is a step towards solving real problems and proving that potential isn't defined by resources, but by determination.</p>
-            </div>
-        </main>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="About The Builder | Sufyan Khan"
+    />
+    <meta
+      name="twitter:description"
+      content="HSSC Computer Science graduate and self-taught developer."
+    />
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader-logo"><span>P</span>P</div>
     </div>
 
+    <header>
+      <div class="wrapper">
+        <nav>
+          <div class="logo">
+            <i class="fas fa-code"></i> programming<span>.pioneer</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-controls">
+            <button
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-section">
+      <div class="wrapper">
+        <div class="section-header reveal" style="padding-top: 2rem">
+          <h1>
+            The Builder's <span style="color: var(--accent-color)">Origin</span>
+          </h1>
+          <p>Rooted in tradition. Executing with modern tech. Built on absolute discipline.</p>
+        </div>
+
+        <section class="section" style="padding-top: 0">
+          <div class="section-header reveal">
+            <h2>
+              The <span style="color: var(--accent-color)">Foundation</span>
+            </h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">
+                Higher Secondary School Certificate (HSSC)
+              </div>
+              <h3>Allama Iqbal Model School &amp; College (AIMS)</h3>
+              <p><strong>Grade A (850/1,200) – Computer Science</strong></p>
+              <p>
+                Mastered the hard fundamentals: Mathematics, Physics, and Computer Science. No shortcuts, just traditional academic rigor. Fully verified by IBCC &amp; MOFA for global standards.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">The Daily Grind</div>
+              <h3>Self-Taught Engineering</h3>
+              <p>
+                Bootcamps are easy; reading documentation at 2 AM is hard. I taught myself Python, C++, and full-stack web architecture through brute-force execution and shipping real-world projects.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Cloud Architecture</div>
+              <h3>Frugal &amp; Serverless Systems</h3>
+              <p>
+                Engineering is about maximizing output with minimal resources. I build production-grade, highly scalable applications leveraging free-tier cloud infrastructure and zero-cost edge tech.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div
+            class="card card-glass reveal"
+            style="max-width: 800px; margin: 0 auto"
+          >
+            <div class="card-icon"><i class="fas fa-hammer"></i></div>
+            <h2>My Manifesto</h2>
+            <p
+              class="statement"
+              style="
+                color: var(--text-secondary);
+                font-style: italic;
+                font-size: 1.1rem;
+              "
+            >
+              "Motivation is a myth; discipline is the only metric that matters. I believe in the old-school values of putting your head down, doing the reps, and letting the work speak for itself. You don't need a massive budget or a fancy degree to architect world-class systems—you just need the grit to outwork the problem."
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header reveal">
+            <h2>
+              Core <span style="color: var(--accent-color)">Pillars</span>
+            </h2>
+          </div>
+          <div class="info-grid">
+            <div class="card reveal-left">
+              <div class="card-icon"><i class="fas fa-fire"></i></div>
+              <h2>Unbreakable Discipline</h2>
+              <p>
+                Consistency over everything. I don't wait for inspiration to strike; I sit down and write the code. Daily execution is the only path to mastery.
+              </p>
+            </div>
+            <div class="card reveal-right">
+              <div class="card-icon"><i class="fas fa-puzzle-piece"></i></div>
+              <h2>First-Principles Logic</h2>
+              <p>
+                No copy-pasting blind solutions. I break complex challenges down to their raw fundamentals, whether it's an algorithm or a database schema.
+              </p>
+            </div>
+            <div class="card reveal-left">
+              <div class="card-icon"><i class="fas fa-server"></i></div>
+              <h2>Resourceful Engineering</h2>
+              <p>
+                Traditional frugality meets modern tech. Designing robust, scalable cloud architectures that operate seamlessly without bloating infrastructure costs.
+              </p>
+            </div>
+            <div class="card reveal-right">
+              <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+              <h2>Honoring the Roots</h2>
+              <p>
+                You don't rise up just to leave your people behind. Sharing knowledge, teaching 50+ students digital literacy, and building the community up with me.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-code"></i> programming<span>.pioneer</span>
+            </div>
+            <p>
+              Disciplined developer building real-world projects and sharing
+              knowledge freely.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://linkedin.com/in/sufyan-khans"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a
+                href="https://github.com/programmingpioneer"
+                target="_blank"
+                title="GitHub"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="mailto:7t7sufyan@gmail.com" title="Email"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="https://www.instagram.com/programmingpioneer" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Quick Links <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-heading">
+              Connect <i class="fas fa-chevron-down footer-toggle"></i>
+            </h4>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:7t7sufyan@gmail.com"
+                  ><i class="fas fa-envelope"></i> 7t7sufyan@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/sufyan-khans" target="_blank"
+                  ><i class="fab fa-linkedin"></i> LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/programmingpioneer" target="_blank"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
+              </li>
+              <li>
+                <span
+                  ><i class="fas fa-map-marker-alt"></i> Sakhakot, Malakand,
+                  KP</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 programming.pioneer · Built with pure discipline.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up"></i>
+      <svg viewBox="0 0 50 50">
+        <circle class="ring-bg" cx="25" cy="25" r="22"></circle>
+        <circle class="ring-progress" cx="25" cy="25" r="22"></circle>
+      </svg>
+    </button>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
