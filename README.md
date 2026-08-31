@@ -85,7 +85,7 @@ Traditional portfolios rely on heavy frameworks and unnecessary dependencies. **
 ## 🖼️ System Visual Preview
 
 <div align="center">
-  <img src="screenshots/web-preview.png" alt="Sufyan Portfolio Preview" width="70%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+  <img src="screenshots/portpolio.png" alt="Sufyan Portfolio Preview" width="70%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
 </div>
 
 <p align="center">
