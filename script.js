@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (statNumbers.length) {
         const animateCounter = (el) => {
             const target = parseInt(el.getAttribute('data-target'), 10) || 0;
-            const duration = 1800;
+            const duration = 1200;
             const startTime = performance.now();
             function update(now) {
                 const progress = Math.min((now - startTime) / duration, 1);
@@ -306,7 +306,7 @@ window.addEventListener('load', function () {
     if (preloader) {
         setTimeout(() => {
             preloader.classList.add('hidden');
-        }, 400);
+        }, 200);
     }
 });
 
